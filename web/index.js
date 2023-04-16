@@ -2,6 +2,7 @@
 import { join } from "path";
 import { readFileSync } from "fs";
 import express from "express";
+import morgan from "morgan";
 import serveStatic from "serve-static";
 
 import shopify from "./shopify.js";
@@ -16,6 +17,8 @@ const STATIC_PATH =
     : `${process.cwd()}/frontend/`;
 
 const app = express();
+// app.use(morgan("combined"));
+app.use(morgan("dev"));
 
 // Set up Shopify authentication and webhook handling
 app.get(shopify.config.auth.path, shopify.auth.begin());
