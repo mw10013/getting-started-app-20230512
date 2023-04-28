@@ -6,8 +6,10 @@ export default function Sandbox() {
     <Page>
       <TitleBar
         title="Sandbox"
+        breadcrumbs={[{content: "Home", url: "/"}]}
         primaryAction={{
           content: "Primary action",
+          url: '/pagename',
           onAction: () => console.log("Primary action"),
         }}
         secondaryActions={[
