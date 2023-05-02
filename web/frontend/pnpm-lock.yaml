@@ -6,28 +6,28 @@ dependencies:
     version: 3.7.4
   '@shopify/app-bridge-react':
     specifier: ^3.1.0
-    version: 3.7.4(react@17.0.2)
+    version: 3.7.4(react@18.2.0)
   '@shopify/app-bridge-utils':
     specifier: ^3.1.0
     version: 3.5.1
   '@shopify/polaris':
     specifier: ^9.11.0
-    version: 9.24.0(react-dom@17.0.2)(react@17.0.2)
+    version: 9.24.0(react-dom@18.2.0)(react@18.2.0)
   '@vitejs/plugin-react':
     specifier: 4.0.0
     version: 4.0.0(vite@4.3.3)
   react:
-    specifier: ^17.0.2
-    version: 17.0.2
+    specifier: ^18.2.0
+    version: 18.2.0
   react-dom:
-    specifier: ^17.0.2
-    version: 17.0.2(react@17.0.2)
+    specifier: ^18.2.0
+    version: 18.2.0(react@18.2.0)
   react-query:
     specifier: ^3.34.19
-    version: 3.39.3(react-dom@17.0.2)(react@17.0.2)
+    version: 3.39.3(react-dom@18.2.0)(react@18.2.0)
   react-router-dom:
     specifier: ^6.3.0
-    version: 6.10.0(react-dom@17.0.2)(react@17.0.2)
+    version: 6.10.0(react-dom@18.2.0)(react@18.2.0)
   vite:
     specifier: ^4.3.3
     version: 4.3.3
@@ -523,13 +523,13 @@ packages:
     resolution: {integrity: sha512-fx0ME5xAbfDEomUMHaH67VddCUOvvxsz9I/7TbwOt7SCAl1llV8jx9ZkYhvmE31RCKqfuMa+posTJa9ePkQJ9w==}
     dev: false
 
-  /@shopify/app-bridge-react@3.7.4(react@17.0.2):
+  /@shopify/app-bridge-react@3.7.4(react@18.2.0):
     resolution: {integrity: sha512-4/X+GtVcjHGRfnhnonCSva3pQXWjnlkrWMj5Q8Dn4ZI7gxn5hxft6VLTrcoliiEHWkbkL2P3f9KbF8WyhjGZRA==}
     peerDependencies:
       react: ^16.0.0 || ^17.0.0 || ^18.0.0
     dependencies:
       '@shopify/app-bridge': 3.7.4
-      react: 17.0.2
+      react: 18.2.0
     dev: false
 
   /@shopify/app-bridge-utils@3.5.1:
@@ -555,7 +555,7 @@ packages:
     resolution: {integrity: sha512-1kYnaRU5MtSV+DMcSn5Mytrnsev1IO/trORD8BtiW+s2V85K5LoNqAZ1F1rRmJnZLAfe8XwlAixkR+sCDLSYmQ==}
     dev: false
 
-  /@shopify/polaris@9.24.0(react-dom@17.0.2)(react@17.0.2):
+  /@shopify/polaris@9.24.0(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-7ca3maYnyAmG7kcz7P7s9tW/09nLGT7AQv5E98ekw4aAL7ZWGTV3hAh7n7wo0Cc7RLepkSZgqDI1jdYk99nZGQ==}
     peerDependencies:
       react: ^16.14.0 || ^17.0.0
@@ -566,10 +566,10 @@ packages:
       '@types/react': 18.0.31
       '@types/react-dom': 18.0.11
       '@types/react-transition-group': 4.4.5
-      react: 17.0.2
-      react-dom: 17.0.2(react@17.0.2)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
       react-fast-compare: 3.2.1
-      react-transition-group: 4.4.5(react-dom@17.0.2)(react@17.0.2)
+      react-transition-group: 4.4.5(react-dom@18.2.0)(react@18.2.0)
     dev: false
 
   /@tootallnate/once@2.0.0:
@@ -1241,15 +1241,14 @@ packages:
     resolution: {integrity: sha512-FIqgj2EUvTa7R50u0rGsyTftzjYmv/a3hO345bZNrqabNqjtgiDMgmo4mkUjd+nzU5oF3dClKqFIPUKybUyqoQ==}
     dev: true
 
-  /react-dom@17.0.2(react@17.0.2):
-    resolution: {integrity: sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==}
+  /react-dom@18.2.0(react@18.2.0):
+    resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
     peerDependencies:
-      react: 17.0.2
+      react: ^18.2.0
     dependencies:
       loose-envify: 1.4.0
-      object-assign: 4.1.1
-      react: 17.0.2
-      scheduler: 0.20.2
+      react: 18.2.0
+      scheduler: 0.23.0
     dev: false
 
   /react-fast-compare@3.2.1:
@@ -1260,7 +1259,7 @@ packages:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: false
 
-  /react-query@3.39.3(react-dom@17.0.2)(react@17.0.2):
+  /react-query@3.39.3(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-nLfLz7GiohKTJDuT4us4X3h/8unOh+00MLb2yJoGTPjxKs2bc1iDhkNx2bd5MKklXnOD3NrVZ+J2UXujA5In4g==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -1275,8 +1274,8 @@ packages:
       '@babel/runtime': 7.21.0
       broadcast-channel: 3.7.0
       match-sorter: 6.3.1
-      react: 17.0.2
-      react-dom: 17.0.2(react@17.0.2)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /react-refresh@0.14.0:
@@ -1284,7 +1283,7 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /react-router-dom@6.10.0(react-dom@17.0.2)(react@17.0.2):
+  /react-router-dom@6.10.0(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-E5dfxRPuXKJqzwSe/qGcqdwa18QiWC6f3H3cWXM24qj4N0/beCIf/CWTipop2xm7mR0RCS99NnaqPNjHtrAzCg==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -1292,22 +1291,22 @@ packages:
       react-dom: '>=16.8'
     dependencies:
       '@remix-run/router': 1.5.0
-      react: 17.0.2
-      react-dom: 17.0.2(react@17.0.2)
-      react-router: 6.10.0(react@17.0.2)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-router: 6.10.0(react@18.2.0)
     dev: false
 
-  /react-router@6.10.0(react@17.0.2):
+  /react-router@6.10.0(react@18.2.0):
     resolution: {integrity: sha512-Nrg0BWpQqrC3ZFFkyewrflCud9dio9ME3ojHCF/WLsprJVzkq3q3UeEhMCAW1dobjeGbWgjNn/PVF6m46ANxXQ==}
     engines: {node: '>=14'}
     peerDependencies:
       react: '>=16.8'
     dependencies:
       '@remix-run/router': 1.5.0
-      react: 17.0.2
+      react: 18.2.0
     dev: false
 
-  /react-transition-group@4.4.5(react-dom@17.0.2)(react@17.0.2):
+  /react-transition-group@4.4.5(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-pZcd1MCJoiKiBR2NRxeCRg13uCXbydPnmB4EOeRrY7480qNWO8IIgQG6zlDkm6uRMsURXPuKq0GWtiM59a5Q6g==}
     peerDependencies:
       react: '>=16.6.0'
@@ -1317,16 +1316,15 @@ packages:
       dom-helpers: 5.2.1
       loose-envify: 1.4.0
       prop-types: 15.8.1
-      react: 17.0.2
-      react-dom: 17.0.2(react@17.0.2)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /react@17.0.2:
-    resolution: {integrity: sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==}
+  /react@18.2.0:
+    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
-      object-assign: 4.1.1
     dev: false
 
   /regenerator-runtime@0.13.11:
@@ -1366,11 +1364,10 @@ packages:
       xmlchars: 2.2.0
     dev: true
 
-  /scheduler@0.20.2:
-    resolution: {integrity: sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==}
+  /scheduler@0.23.0:
+    resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
     dependencies:
       loose-envify: 1.4.0
-      object-assign: 4.1.1
     dev: false
 
   /semver@6.3.0:
