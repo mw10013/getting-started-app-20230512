@@ -1,6 +1,7 @@
+import React from "react";
 import { Routes as ReactRouterRoutes, Route } from "react-router-dom";
 import { ComponentType } from "react";
-import React from "react";
+import invariant from 'tiny-invariant';
 
 export type Route = {
   [key: string]: ComponentType;
@@ -27,7 +28,8 @@ export default function Routes({ pages }: { pages: Pages }): JSX.Element {
     <Route key={path} path={path} element={<Component />} />
   ));
 
-  const NotFound = routes.find(({ path }) => path === "/notFound").component;
+  const NotFound = routes.find(({ path }) => path === "/notFound")?.component;
+  invariant(NotFound, "missing route /notFound");
 
   return (
     <ReactRouterRoutes>
