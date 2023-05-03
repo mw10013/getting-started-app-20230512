@@ -7,6 +7,7 @@ import {
   QueryProvider,
   PolarisProvider,
 } from "./components";
+import React from "react";
 
 export default function App() {
   // Any .tsx or .jsx files in /pages will become a route
@@ -21,7 +22,7 @@ export default function App() {
             <NavigationMenu
               navigationLinks={[
                 {
-                  label: "Page name",
+                  label: "Page name!",
                   destination: "/pagename",
                 },
               ]}
