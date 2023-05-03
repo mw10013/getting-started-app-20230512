@@ -8,11 +8,19 @@ import {
   PolarisProvider,
 } from "./components";
 import React from "react";
+import type { Route } from "./Routes";
 
 export default function App() {
   // Any .tsx or .jsx files in /pages will become a route
   // See documentation for <Routes /> for more info
-  const pages = import.meta.globEager("./pages/**/!(*.test.[jt]sx)*.([jt]sx)");
+  // const pages = import.meta.globEager("./pages/**/!(*.test.[jt]sx)*.([jt]sx)");
+  const pages = import.meta.glob<Route>(
+    "./pages/**/!(*.test.[jt]sx)*.([jt]sx)",
+    {
+      eager: true,
+    }
+  );
+
 
   return (
     <PolarisProvider>
