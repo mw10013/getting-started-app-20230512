@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Card,
   Page,
@@ -19,7 +20,7 @@ export default function HomePage() {
 
   return (
     <Page narrowWidth>
-      <TitleBar title="Getting Started App" primaryAction={null} />
+      <TitleBar title="Getting Started App" />
       <Layout>
         <Layout.Section>
           <Card sectioned>
