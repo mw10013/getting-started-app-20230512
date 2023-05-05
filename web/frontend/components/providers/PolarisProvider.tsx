@@ -4,24 +4,21 @@ import { useNavigate } from "@shopify/app-bridge-react";
 import translations from "@shopify/polaris/locales/en.json";
 import "@shopify/polaris/build/esm/styles.css";
 import type { PropsWithChildren } from "react";
-import { LinkLikeComponentProps } from "@shopify/polaris/build/ts/latest/src/utilities/link";
-// import { LinkLikeComponent } from "@shopify/polaris/build/ts/latest/src/utilities/link/types";
+import type { LinkLikeComponentProps } from "@shopify/polaris/build/ts/latest/src/utilities/link";
 
-type AppBridgeLinkProps = Parameters<
-  Extract<
-    ConstructorParameters<typeof AppProvider>[0]["linkComponent"],
-    React.FunctionComponent<any>
-  >
->[0];
+// type AppBridgeLinkProps = Parameters<
+//   Extract<
+//     ConstructorParameters<typeof AppProvider>[0]["linkComponent"],
+//     React.FunctionComponent<any>
+//   >
+// >[0];
 
 function AppBridgeLink({
   url,
   children,
   external,
   ...rest
-}: 
-// }: LinkLikeComponentProps) {
-AppBridgeLinkProps) {
+}: LinkLikeComponentProps) {
   const navigate = useNavigate();
   const handleClick = useCallback(() => {
     navigate(url);
