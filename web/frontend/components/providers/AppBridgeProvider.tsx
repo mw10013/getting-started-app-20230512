@@ -1,7 +1,9 @@
 import { useMemo, useState } from "react";
+import type { PropsWithChildren } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Provider } from "@shopify/app-bridge-react";
 import { Banner, Layout, Page } from "@shopify/polaris";
+import type { To } from "history";
 
 /**
  * A component to configure App Bridge.
@@ -12,12 +14,12 @@ import { Banner, Layout, Page } from "@shopify/polaris";
  *
  * See: https://shopify.dev/apps/tools/app-bridge/react-components
  */
-export function AppBridgeProvider({ children }) {
+export function AppBridgeProvider({ children }: PropsWithChildren) {
   const location = useLocation();
   const navigate = useNavigate();
   const history = useMemo(
     () => ({
-      replace: (path) => {
+      replace: (path: To) => {
         navigate(path, { replace: true });
       },
     }),
