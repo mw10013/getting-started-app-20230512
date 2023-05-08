@@ -2,14 +2,18 @@
 import { join } from "path";
 import { readFileSync } from "fs";
 import express from "express";
-import morgan from "morgan";
+// import morgan from "morgan";
 import serveStatic from "serve-static";
 
-import shopify from "./shopify.js";
-import productCreator from "./product-creator.js";
-import GDPRWebhookHandlers from "./gdpr.js";
+// import shopify from "./shopify.js";
+// import productCreator from "./product-creator.js";
+// import GDPRWebhookHandlers from "./gdpr.js";
+import shopify from "./shopify";
+import productCreator from "./product-creator";
+// import addUninstallWebhookHandler from "./webhooks/uninstall";
+import GDPRWebhookHandlers from "./gdpr";
 
-const PORT = parseInt(process.env.BACKEND_PORT || process.env.PORT, 10);
+const PORT = parseInt(process.env.BACKEND_PORT || process.env.PORT!, 10);
 
 const STATIC_PATH =
   process.env.NODE_ENV === "production"
@@ -18,7 +22,7 @@ const STATIC_PATH =
 
 const app = express();
 // app.use(morgan("combined"));
-app.use(morgan("dev"));
+// app.use(morgan("dev"));
 
 // Set up Shopify authentication and webhook handling
 app.get(shopify.config.auth.path, shopify.auth.begin());
@@ -31,6 +35,7 @@ app.post(
   shopify.config.webhooks.path,
   shopify.processWebhooks({ webhookHandlers: GDPRWebhookHandlers })
 );
+// await addUninstallWebhookHandler();
 
 // If you are adding routes outside of the /api path, remember to
 // also add a proxy rule for them in web/frontend/vite.config.js
@@ -53,9 +58,11 @@ app.get("/api/products/create", async (_req, res) => {
   try {
     await productCreator(res.locals.shopify.session);
   } catch (e) {
-    console.log(`Failed to process products/create: ${e.message}`);
-    status = 500;
-    error = e.message;
+    if (e instanceof Error) {
+      console.log(`Failed to process products/create: ${e.message}`);
+      status = 500;
+      error = e.message;
+    }
   }
   res.status(status).send({ success: status === 200, error });
 });
