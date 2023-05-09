@@ -2,12 +2,9 @@
 import { join } from "path";
 import { readFileSync } from "fs";
 import express from "express";
-// import morgan from "morgan";
+import morgan from "morgan";
 import serveStatic from "serve-static";
 
-// import shopify from "./shopify.js";
-// import productCreator from "./product-creator.js";
-// import GDPRWebhookHandlers from "./gdpr.js";
 import shopify from "./shopify";
 import productCreator from "./product-creator";
 // import addUninstallWebhookHandler from "./webhooks/uninstall";
@@ -22,7 +19,7 @@ const STATIC_PATH =
 
 const app = express();
 // app.use(morgan("combined"));
-// app.use(morgan("dev"));
+app.use(morgan("dev"));
 
 // Set up Shopify authentication and webhook handling
 app.get(shopify.config.auth.path, shopify.auth.begin());

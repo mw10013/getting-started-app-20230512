@@ -4,9 +4,8 @@
   "license": "UNLICENSED",
   "scripts": {
     "debug": "node --inspect-brk index.js",
-    "dev-": "cross-env NODE_ENV=development DEBUG=express:* nodemon index.js --ignore ./frontend",
-    "dev": "cross-env NODE_ENV=development nodemon --experimental-specifier-resolution=node index.js --ignore ./frontend",
-    "serve": "cross-env NODE_ENV=production node index.js"
+    "dev": "cross-env NODE_ENV=development nodemon --experimental-specifier-resolution=node index.ts",
+    "serve": "cross-env NODE_ENV=production node --experimental-specifier-resolution=node index.ts"
   },
   "type": "module",
   "engines": {
@@ -17,11 +16,13 @@
     "@shopify/shopify-app-session-storage-sqlite": "^1.2.1",
     "compression": "^1.7.4",
     "cross-env": "^7.0.3",
+    "morgan": "^1.10.0",
     "serve-static": "^1.15.0"
   },
   "devDependencies": {
     "@types/compression": "^1.7.2",
     "@types/express": "^4.17.17",
+    "@types/morgan": "^1.9.4",
     "@types/node": "^20.1.0",
     "@types/nodemon": "^1.19.2",
     "@types/serve-static": "^1.15.1",
