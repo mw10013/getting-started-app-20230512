@@ -26,7 +26,10 @@ export function useAuthenticatedFetch() {
   };
 }
 
-function checkHeadersForReauthorization(headers: Headers, app: ClientApplication<AppBridgeState>) {
+function checkHeadersForReauthorization(
+  headers: Headers,
+  app: ClientApplication<AppBridgeState>
+) {
   if (headers.get("X-Shopify-API-Request-Failure-Reauthorize") === "1") {
     const authUrlHeader =
       headers.get("X-Shopify-API-Request-Failure-Reauthorize-Url") ||
