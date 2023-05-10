@@ -20,7 +20,7 @@ export const useAppQuery = ({
   reactQueryOptions,
 }: {
   url: string;
-  fetchInit: RequestInit | undefined;
+  fetchInit?: RequestInit | undefined;
   reactQueryOptions: Parameters<typeof useQuery<unknown, unknown, unknown, string>>[2]
 }) => {
   const authenticatedFetch = useAuthenticatedFetch();

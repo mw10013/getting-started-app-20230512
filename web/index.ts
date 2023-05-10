@@ -41,6 +41,12 @@ app.use("/api/*", shopify.validateAuthenticatedSession());
 
 app.use(express.json());
 
+app.get("/api/feefifo", async (_req, res) => {
+  const arr = ["fee", "fi", "fo"];
+  const s = arr[Math.floor(Math.random() * arr.length)];
+  res.status(200).send(s);
+});
+
 app.get("/api/products/count", async (_req, res) => {
   const countData = await shopify.api.rest.Product.count({
     session: res.locals.shopify.session,
