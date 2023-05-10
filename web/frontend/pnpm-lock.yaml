@@ -13,6 +13,9 @@ dependencies:
   '@shopify/polaris':
     specifier: ^10.49.1
     version: 10.49.1(react-dom@18.2.0)(react@18.2.0)
+  '@shopify/polaris-icons':
+    specifier: ^6.15.0
+    version: 6.15.0
   '@vitejs/plugin-react':
     specifier: 4.0.0
     version: 4.0.0(vite@4.3.3)

@@ -48,6 +48,13 @@ export default function HomePage() {
                     >
                       Sandbox
                     </Link>{" "}
+                    <Link
+                      onClick={() => {
+                        navigate("/sandbox1");
+                      }}
+                    >
+                      Sandbox1
+                    </Link>{" "}
                     Your app is ready to explore! It contains everything you
                     need to get started including the{" "}
                     <Link url="https://polaris.shopify.com/" external>
