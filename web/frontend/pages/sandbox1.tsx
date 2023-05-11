@@ -5,7 +5,7 @@ export default function Sandbox() {
   return (
     <Page>
       <TitleBar
-        title="Sandbox1!!"
+        title="Sandbox1!!!"
         breadcrumbs={[{ content: "Home", url: "/" }]}
         primaryAction={{
           content: "Primary action",
